@@ -1,0 +1,27 @@
+plugins {
+    id 'java-library'
+    id 'application'
+}
+
+sourceCompatibility = 1.8
+
+mainClassName = 'ball.BallApp'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.1")
+    testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
+}
+
+test {
+    testLogging {
+        events "PASSED", "STARTED", "FAILED", "SKIPPED"
+    }
+}
+
+build.dependsOn test
+test.dependsOn cleanTest
