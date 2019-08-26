@@ -1,7 +1,5 @@
 package ball.model;
 
-import com.sun.tools.javac.util.List;
-
 import java.awt.*;
 import java.util.ArrayList;
 
